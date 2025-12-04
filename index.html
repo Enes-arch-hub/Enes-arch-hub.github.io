@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enes Portfolio</title>
+
+    <style>
+        body{
+            margin:0; padding:0;
+            font-family: Arial, sans-serif;
+            background:#f8f8f8;
+            color:#333;
+            scroll-behavior:smooth;
+        }
+
+        header{
+            background:#fff;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow:0 2px 7px rgba(0,0,0,0.08);
+        }
+
+        header h2{
+            font-size:24px; font-weight:600;
+        }
+
+        nav a{
+            text-decoration:none; color:#333;
+            margin:0 18px; font-size:16px;
+        }
+
+        nav a:hover{ color:#007acc; }
+
+        .hero{
+            text-align:center; padding:120px 30px;
+        }
+        .hero h1{ font-size:45px; }
+        .hero p{ font-size:18px; margin-top:10px; }
+        .btn{
+            margin-top:20px;
+            padding:12px 28px;
+            background:#007acc; color:white;
+            border:none; border-radius:5px; cursor:pointer;
+        }
+        .btn:hover{ background:#005b99; }
+
+        section{ padding:70px 10%; }
+        h2.title{
+            text-align:center; font-size:28px;
+            margin-bottom:40px; font-weight:bold;
+        }
+
+        /* ABOUT */
+        .about p{
+            text-align:center; font-size:18px;
+            line-height:1.6;
+        }
+
+        /* SKILLS */
+        .skills-list{
+            display:flex; justify-content:center;
+            flex-wrap:wrap; gap:20px;
+        }
+        .skill{
+            background:white; padding:18px 28px;
+            border-radius:7px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.08);
+            font-size:17px; font-weight:600;
+        }
+
+        /* PROJECTS */
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+        }
+        .project-card{
+            background:white; padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+        }
+        .project-card h3{ font-size:20px; margin-bottom:10px; }
+        .project-card p{ font-size:15px; line-height:1.5; }
+
+        .project-card a{
+            margin-top:10px;
+            display:inline-block;
+            color:#007acc;font-weight:bold;
+            text-decoration:none;
+        }
+
+        /* CONTACT */
+        form{
+            max-width:450px; margin:auto;
+            display:flex; flex-direction:column; gap:12px;
+        }
+        input, textarea{
+            padding:12px;border:1px solid #ccc;
+            border-radius:5px;font-size:16px;
+        }
+        textarea{ height:120px;resize:none; }
+
+        footer{
+            text-align:center;padding:20px 0;
+            background:#fff;width:100%;
+            box-shadow:0 -2px 6px rgba(0,0,0,0.08);
+            margin-top:50px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width:900px){
+            header{flex-direction:column;text-align:center;}
+            nav a{padding:6px 0;}
+        }
+        @media (max-width:600px){
+            .hero h1{font-size:30px;}
+            .projects{grid-template-columns:1fr;}
+            .skills-list{flex-direction:column;}
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Enes Portfolio</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Hi, I'm <span style="color:#007acc;">Enes</span></h1>
+    <p>Flutter Developer • Machine Learning & Data Science Enthusiast </p>
+    <button class="btn" onclick="alert('Welcome! 😊')">Say Hello</button>
+</section>
+
+<section id="about">
+    <h2 class="title">About Me</h2>
+    <p>
+        I'm a tech enthusiast focusing on Flutter app development and data-driven solutions.
+        I enjoy building smooth UI experiences for mobile and exploring Machine Learning,
+        Data Visualization, and AI concepts. Constant learning, constant growth 🚀.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="title">Skills & Tech Stack</h2>
+
+    <div class="skills-list">
+        <div class="skill">Flutter</div>
+        <div class="skill">Dart</div>
+        <div class="skill">Python</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">TensorFlow / Sklearn</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">HTML + CSS</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="title">Projects</h2>
+
+    <div class="projects">
+        <div class="project-card">
+            <h3>Flutter Notes App</h3>
+            <p>A modern notes application built with Dart + Flutter.</p>
+            <a href="#">View Code</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Machine Learning Model</h3>
+            <p>A ML model built in Python for data prediction and analysis.</p>
+            <a href="#">Try It</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>You are viewing it now — built and designed from scratch.</p>
+            <a href="#">Source Code</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="title">Contact Me</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Enes | Flutter & Machine Learning Portfolio
+</footer>
+
+</body>
+</html>
